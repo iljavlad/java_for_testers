@@ -16,6 +16,6 @@ public class TriangleTest {
     void canCalculateArea() {
         var s = new Triangle(6, 8, 10);
         double result = s.triangelArea();
-        Assertions.assertEquals(24.0, Triangle.triangelArea(6,8,10));
+        Assertions.assertEquals(24.0, result);
     }
 }
