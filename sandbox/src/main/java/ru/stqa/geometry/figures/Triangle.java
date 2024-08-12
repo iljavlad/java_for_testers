@@ -3,6 +3,16 @@ package ru.stqa.geometry.figures;
 public record Triangle(double a, double b, double c) {
 
 
+    public Triangle {
+        if (a < 0 || b < 0 || c < 0) {
+            throw new IllegalArgumentException("Rectangle side should be non-negative");
+        }
+
+        if ((a > (b + c)) || (b > (a + c)) || (c > (a + b))) {
+            throw new IllegalArgumentException("A side of a triangle cannot be less than the sum of the other two sides");
+        }
+    }
+
 
     public static void printTriangelPerimetr(Triangle p) {
         String text = String.format("Периметр треугольника со сторонами %f, %f и %f = %f", p.a, p.b, p.c, p.triangelPerimetr());
