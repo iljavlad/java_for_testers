@@ -50,7 +50,7 @@ public class GroupRemovalTests {
             driver.findElement(By.linkText("group page")).click();
         }
         driver.findElement(By.name("selected[]")).click();
-        driver.findElement(By.cssSelector("input:nth-child(15)")).click();
+        driver.findElement(By.name("delete")).click();
         driver.findElement(By.linkText("groups")).click();
 
     }
